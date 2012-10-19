@@ -1,0 +1,84 @@
+
+.a {border: 1px solid red;}
+.b {border: 1px solid blue;}
+.c {border: 1px solid green;}
+
+.hidden {
+    display: none;
+}
+
+.clearfix:after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+
+body#main {
+    background-color: #FFDD00;
+    color: #222222;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+div#header {
+    background: #ddd;
+}
+
+    div#info {
+        float: left;
+        display: block;
+        height: 50px;
+        padding-left: 12px;
+    }
+
+        div#app-name {
+            color: #111;
+            font-size: 32px;
+            float: left;
+            padding-top: 6px;
+        }
+
+        div#description {
+            color: #444;
+            font-size: 24px;
+            float: left;
+            padding-top: 12px;
+            padding-left: 10px;
+        }
+
+
+    div#profile {
+        float: right;
+        display: block;
+    }
+
+
+div#settings {
+    background: #c86;
+}
+
+
+div#controls {
+    background: #0b6;
+}
+
+
+div#operation {
+    background: #bb9;
+}
+
+
+div#status {
+    background: #54a;
+}
+
+
+div#stats {
+    background: #008;
+}
+
+
+
+
+
