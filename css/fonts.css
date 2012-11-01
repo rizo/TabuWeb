@@ -6,5 +6,10 @@
   src: local('Gentium Book Basic'), local('GentiumBookBasic'), url("../fonts/Gentium_Book_Basic.woff") format('woff');
 }
 
-
+@font-face {
+  font-family: 'DKCrayon Crumble';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/DKCrayon Crumble.ttf") format('woff');
+}
 
