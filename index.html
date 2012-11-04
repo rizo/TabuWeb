@@ -8,8 +8,12 @@
         <link type="text/css" rel="stylesheet" href="./css/reset.css" />
         <link type="text/css" rel='stylesheet' href="./css/fonts.css" />
         <link type="text/css" rel="stylesheet" href="./css/default-theme.css" />
+
+        <!-- Javascript -->
+        <script src="js/core.js" type="text/javascript"></script>
+        <script src="js/general.js" type="text/javascript"></script>
     </head>
-    <body id="main">
+    <body id="main" onload="init()">
         <div id="container" class="">
             <div id="header" class="clearfix">
                 <div id="info" class="">
@@ -22,17 +26,32 @@
                 </div>
             </div>
 
-            <div id="blackboard"></div>
+            <div id="blackboard" class="">
+                <div class="" id="controls">
+                    <a href="#" onclick="toggle_settings()" class="button" id="settings-button"></a>
+                    <a href="#" onclick="open_window('help')" class="button" id="help"></a>
+                    <!-- <a href="" class="button">X</a> -->
+                </div>
+                <div class="hidden" id="settings">
+                    <p>Operação</p>
+                    <ul>
+                        <li id="plus">+</li>
+                        <li id="minus">-</li>
+                        <li id="mult">*</li>
+                        <li id="div">/</li>
+                    </ul>
+                    <hr style="height:10px;" />
+                    <p>Dificuldade</p>
+                    <button id="easy_b" onclick="SM.easy()" class="active">Fácil</button>
+                    <button id="medium_b" onclick="SM.setDifficulty('medium')">Médio</li>
+                    <button id="hard_b" onclick="SM.setDifficulty('hard')">Difícil</li>
+                </div>
+            </div>
+
             <img id="robot" src="./images/robot.png" />
             <div id="shadow"></div>
 
-            <div class="hidden" id="settings">
-                SETTINGS
-            </div>
 
-            <div class="hidden" id="controls">
-                CONTROLS
-            </div>
 
             <div class="hidden" id="operation">
                 OPERATION
@@ -46,6 +65,29 @@
                 STATS
             </div>
         </div>
+
+        <div class="hidden" onclick="close_window()" id="overlay">
+        </div>
+        <div class="hidden" id="window">
+            <div id="toolbar">
+                <a href="#" onclick="close_window()" class="toolbutton" id="close"></a>
+            </div>
+            <div id="content">
+
+                        <div id="help">
+                            <b>Sobre o Jogo</b>
+        <p>Como todos sabemos desde os tempos de escola, aprender requer muita prática. Por exemplo, para aprender a tabuada todos tivemos de a repetir vezes sem conta, o que nem sempre foi muito divertido. Aprender tecnologias web também requer prática mas é muito mais divertido do que aprender a tabuada.  Para compensar vamos praticar as tecnologias web ajudando a tornar a tabuada mais divertida! O vosso desafio é implementar o TabuWeb - uma web app dirigida a miúdos do 1º ciclo do ensino básico que tornará a memorização da tabuada num jogo, com um pouco de competitividade à mistura.</p>
+
+        <p>O TabuWeb poderá ser jogado individualmente ou contra outros miúdos na web.  Ao longo de um jogo vão aparecendo operações aritmética básicas envolvendo 2 algarismos, como "2 + 2" ou "4 x 3". Os jogadores deverão de responder qual o resultado da operação o mais rapidamente possível. Cada operação acertada dará um determinado número de pontos, por exemplo 5000, ao que será subtraído o número de milissegundos que demorou a resposta. Consoante o grau de dificuldade podem, ou não, contar-se pontos negativos. Durante o jogo as operações vão-se sucedendo umas às outras e os pontos acumulados podem traduzir-se no movimento de uma imagem no ecrã. Um cenário simples poderá ser o de uma corrida de caracóis: a imagem de um caracol aparece inicialmente no lado esquerdo do ecrã. Quantos mais pontos forem acumulados maior será o seu deslocamento para a direita, onde está a meta.
+
+        <p>No modo mais simples o TabuWeb disputa-se contra o computador que irá gerar aleatoriamente uma sequência de pontuações para um oponente automático, ganhando o primeiro a atingir a meta. No entanto será muito mais estimulante jogar contra outros miúdos. Para isso cada jogador terá de se escolher um nome ("nick") e aguardar que os seus adversários estejam preparados. O jogo começa simultaneamente para todos os jogadores, cada navegador web vai enviando as pontuações para um servidor central, vai recebendo as pontuações dos adversários, e vai atualizando a visão da "corrida", integrando as pontuações de todos os jogadores.</p>
+        </div>
+
+
+            </div>
+        </div>
+
+
     </body>
 </html>
 
