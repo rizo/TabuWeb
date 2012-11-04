@@ -70,11 +70,12 @@ div#blackboard {
 		position:relative;
 		font-family:DKCrayon Crumble;
 		color:white;
+    float: left;
 		font-size:25px;
 		width: 370px;
 		margin: -80px auto;
 		margin-left:200px;
-
+    z-index: -2;
 	}
 	
 
